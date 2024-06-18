@@ -5,14 +5,14 @@ type SelectProps = {
   name?: string;
   options?: { value: string; label: string }[];
   value?: string;
-  handleOnchange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  Onchange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
 const Select: React.FC<SelectProps> = ({
   text,
   name,
   options,
-  handleOnchange,
+  Onchange,
   value,
 }) => {
   return (
@@ -24,7 +24,7 @@ const Select: React.FC<SelectProps> = ({
         name={name}
         id={name}
         value={value}
-        onChange={handleOnchange}
+        onChange={Onchange}
         className="p-[.7em] rounded-none border-none text-[#7b7b7b]"
       >
         {options?.map(({ value, label }) => (

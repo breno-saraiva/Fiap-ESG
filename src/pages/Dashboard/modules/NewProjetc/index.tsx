@@ -2,11 +2,6 @@ import { ProjectForm } from "./components/Form/ProjectForm";
 import { createProject } from "../../../../api/createProject";
 import { listProjectProps } from "../../../../api/listProjects";
 
-export type projectProps = {
-  cost?: number;
-  service?: string[];
-};
-
 function NewProject() {
   async function handleSubmit(data: listProjectProps) {
     await createProject(data);

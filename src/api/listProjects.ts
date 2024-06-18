@@ -1,8 +1,11 @@
 export type listProjectProps = {
-  id: string;
-  name: string;
-  orçamento: string;
-  categories: { name: string; id: string };
+  tipo_projeto : string;
+  prev_inic : string;
+  prev_fim : string;
+  contato : string;
+  descricao : string;
+  nome : string;
+  orcamento : number;
 };
 
 export const getListProject = async (): Promise<listProjectProps[]> => {
