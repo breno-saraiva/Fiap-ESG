@@ -3,7 +3,7 @@ import React from "react";
 type SelectProps = {
   text?: string;
   name?: string;
-  options?: { id: string; name: string }[];
+  options?: { value: string; label: string }[];
   value?: string;
   handleOnchange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 };
@@ -27,9 +27,9 @@ const Select: React.FC<SelectProps> = ({
         onChange={handleOnchange}
         className="p-[.7em] rounded-none border-none text-[#7b7b7b]"
       >
-        {options?.map(({ id, name }) => (
-          <option value={id} key={id}>
-            {name}
+        {options?.map(({ value, label }) => (
+          <option value={value} key={value}>
+            {label}
           </option>
         ))}
       </select>
