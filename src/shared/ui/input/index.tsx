@@ -5,8 +5,9 @@ type InputProps = {
   text?: string;
   name?: string;
   placeholder?: string;
-  handleOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  OnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string;
+  pattern?: string;
 };
 
 const Input: React.FC<InputProps> = ({
@@ -14,8 +15,9 @@ const Input: React.FC<InputProps> = ({
   text,
   name,
   placeholder,
-  handleOnChange,
+  OnChange,
   value,
+  pattern,
 }) => {
   return (
     <div className="flex flex-col mb-4">
@@ -23,10 +25,11 @@ const Input: React.FC<InputProps> = ({
         {text}
       </label>
       <input
+        pattern={pattern}
         type={type}
         name={name}
         placeholder={placeholder}
-        onChange={handleOnChange}
+        onChange={OnChange}
         value={value}
         className="p-[.7em] rounded-none border-none placeholder:text-[#7b7b7b]"
       />

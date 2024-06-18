@@ -1,4 +1,4 @@
-import { ProjectForm } from "./Form/ProjectForm";
+import { ProjectForm } from "./components/Form/ProjectForm";
 import { createProject } from "../../../../api/createProject";
 import { listProjectProps } from "../../../../api/listProjects";
 

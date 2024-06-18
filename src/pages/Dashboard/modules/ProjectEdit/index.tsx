@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { listProjectProps } from "../../../../api/listProjects";
-import { ProjectForm } from "../NewProjetc/Form/ProjectForm";
+import { ProjectForm } from "../NewProjetc/components/Form/ProjectForm";
 
 function ProjectEdit() {
   const { id } = useParams();
