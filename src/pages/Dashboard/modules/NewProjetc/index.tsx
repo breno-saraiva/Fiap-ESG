@@ -1,6 +1,6 @@
 import { ProjectForm } from "./Form/ProjectForm";
-import { createProject } from "../../api/createProject";
-import { listProjectProps } from "../../api/listProjects";
+import { createProject } from "../../../../api/createProject";
+import { listProjectProps } from "../../../../api/listProjects";
 
 export type projectProps = {
   cost?: number;

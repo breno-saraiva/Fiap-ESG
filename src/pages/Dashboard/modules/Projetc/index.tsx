@@ -1,7 +1,7 @@
 import { Linkbutton } from "../Home/components/LinkButton";
 import { CardProject } from "./components/cardProject";
 import { useState, useEffect } from "react";
-import { getListProject, listProjectProps } from "../../api/listProjects";
+import { getListProject, listProjectProps } from "../../../../api/listProjects";
 
 function Project() {
   const [projects, setProjects] = useState<listProjectProps[]>([]);

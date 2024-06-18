@@ -1,5 +1,5 @@
+import savings from "../../../../img/savings.svg";
 import { Linkbutton } from "./components/LinkButton";
-import savings from "../../img/savings.svg";
 
 function Home() {
   return (

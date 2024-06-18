@@ -2,9 +2,9 @@ import Select from "../components/select";
 import { Input } from "../components/input";
 import { SubmitButton } from "../components/button";
 import React, { useEffect, useState } from "react";
-import { getCategorias } from "../../../api/getCategorias";
-import { getCategoriasApiRes, projectType } from "../../../types";
-import { listProjectProps } from "../../../api/listProjects";
+import { getCategorias } from "../../../../../api/getCategorias";
+import { getCategoriasApiRes, projectType } from "../../../../../types";
+import { listProjectProps } from "../../../../../api/listProjects";
 
 type ProjectFormProps = {
   textBtn?: string;
