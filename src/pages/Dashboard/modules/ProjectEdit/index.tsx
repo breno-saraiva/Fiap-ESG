@@ -46,11 +46,11 @@ function ProjectEdit() {
       <div className="flex flex-col p-16 gap-5">
         <div className="flex justify-between">
           <h1 className="mb-4 text-5xl font-sans font-bold">
-            <span className="bg-[#222] text-[#ffbb33]">Projeto:</span>{" "}
+            <span className="bg-[#222] text-[#22C55E]">Projeto:</span>{" "}
             {project?.nome}
           </h1>
           <button
-            className="border-2 rounded-md w-32 bg-[#222] text-white hover:text-[#ffbb33]"
+            className="border-2 rounded-md w-32 bg-[#222] text-white hover:text-[#22C55E]"
             onClick={toggleProjectForm}
           >
             {!showProjectForm ? "Editar projeto" : "fechar"}
