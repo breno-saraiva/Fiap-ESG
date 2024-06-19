@@ -9,7 +9,7 @@ const SubmitButton: React.FC<ButtonProps> = ({ text, ...rest }) => {
     <div>
       <button
         {...rest}
-        className="bg-[#222] text-white py-[0.7em] px-[1.2em] duration-150 cursor-pointer hover:bg-[#FFBB33] hover:text-[#222] rounded-lg"
+        className="bg-[#222] text-white py-[0.7em] px-[1.2em] duration-150 cursor-pointer hover:bg-[#22C55E] hover:text-[#222] rounded-lg"
       >
         {text}
       </button>

@@ -24,7 +24,7 @@ const CardProject: React.FC<cardProjectProps> = ({
   };
   return (
     <div className="p-4 outline outline-1 outline-[#7a7a7a] rounded-md w-[24%] m-[0.5%]">
-      <h4 className="bg-[#222] text-[#ffbb33] text-lg p-2 mb-5 rounded-md font-semibold">
+      <h4 className="bg-[#22C55E] text-[#000] text-lg p-2 mb-5 rounded-md font-semibold">
         {nome}
       </h4>
       <p className="text-[#7a7a7a] mb-4 flex items-center">

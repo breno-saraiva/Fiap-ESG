@@ -1,27 +1,20 @@
 import { Link } from "react-router-dom";
-import logo from "../../src/img/costs_logo.png";
+import logo from "../../src/img/logo_greentech.png";
 
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between py-4 px-6 bg-[#222] p-4 text-white">
+    <nav className="flex items-center justify-between py-4 px-10 bg-[#222] p-4 text-white">
       <div>
         <Link to="/">
-          <img src={logo} alt="Costs" />
-        </Link>
+        <img src={logo} alt="Costs" style={{ width: '64px', height: '64px' }} />        </Link>
       </div>
       <div>
         <ul className="flex ">
-          <li className="mr-4 hover:text-[#FFBB33]">
+          <li className="mr-6 hover:text-[#22C55E]">
             <Link to="/home">Home</Link>
           </li>
-          <li className="mr-4 hover:text-[#FFBB33]">
-            <Link to="/contato">contato</Link>
-          </li>
-          <li className="mr-4 hover:text-[#FFBB33]">
-            <Link to="/empresas">empresas</Link>
-          </li>
-          <li className="mr-4 hover:text-[#FFBB33]">
-            <Link to="/project">Project</Link>
+          <li className="mr-6 hover:text-[#22C55E]">
+            <Link to="/project">Projetos</Link>
           </li>
         </ul>
       </div>
