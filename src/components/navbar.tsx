@@ -14,12 +14,6 @@ function Navbar() {
             <Link to="/home">Home</Link>
           </li>
           <li className="mr-6 hover:text-[#22C55E]">
-            <Link to="/contato">Contato</Link>
-          </li>
-          <li className="mr-6 hover:text-[#22C55E]">
-            <Link to="/empresas">Empresas</Link>
-          </li>
-          <li className="mr-6 hover:text-[#22C55E]">
             <Link to="/project">Projetos</Link>
           </li>
         </ul>
