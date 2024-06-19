@@ -57,25 +57,67 @@ function ProjectEdit() {
           </button>
         </div>
         {!showProjectForm ? (
-          <div className="flex flex-col gap-4 py-5">
-            <p>
-              <span className="text-2xl font-bold text-[#222]">Categoria:</span>{" "}
-              <span className="text-xl font-medium text-[#7a7a7a]">
-                {project?.tipo_projeto}
-              </span>
-            </p>
-            <p>
-              <span className="text-2xl font-bold text-[#222]">
-                Total de Orçamento:
-              </span>{" "}
-              <span className="text-xl font-medium text-[#7a7a7a]">
-                {project?.orcamento}
-              </span>
-            </p>
+          <div className="flex gap-12">
+            <div className="flex flex-col gap-4 py-5">
+              <p>
+                <span className="text-2xl font-bold text-[#222]">
+                  Tipo de Projeto:
+                </span>
+                <br />
+                <span className="text-xl font-medium text-[#7a7a7a]">
+                  {project?.tipo_projeto}
+                </span>
+              </p>
+              <p>
+                <span className="text-2xl font-bold text-[#222]">
+                  Total de Orçamento:
+                </span>
+                <br />
+                <span className="text-xl font-medium text-[#7a7a7a]">
+                  R${project?.orcamento}
+                </span>
+              </p>
+              <p>
+                <span className="text-2xl font-bold text-[#222]">Contato:</span>
+                <br />
+                <span className="text-xl font-medium text-[#7a7a7a]">
+                  {project?.contato}
+                </span>
+              </p>
+            </div>
+            <div className="flex flex-col gap-4 py-5">
+              <p>
+                <span className="text-2xl font-bold text-[#222]">Duração:</span>
+                <br />
+                <span className="text-xl font-medium text-[#7a7a7a]">
+                  {project?.prev_inic} - {project?.prev_fim}
+                </span>
+              </p>
+              <p>
+                <span className="text-2xl font-bold text-[#222]">
+                  Descrição:
+                </span>
+                <br />
+                <span className="text-xl font-medium text-[#7a7a7a]">
+                  {project?.descricao}
+                </span>
+              </p>
+            </div>
           </div>
         ) : (
           <div>
-            <ProjectForm handleOnSubmit={(e) => editPost(e)} textBtn="Editar" />
+            <ProjectForm
+              handleOnSubmit={(e) => editPost(e)}
+              textBtn="Editar"
+              projectData={project}
+              defaultCotato={project?.contato}
+              defaultDateFinal={project?.prev_fim}
+              defaultDateInit={project?.prev_inic}
+              defaultDescription={project?.descricao}
+              defaultName={project?.nome}
+              defaultSelect={project?.tipo_projeto}
+              defaultOrcamento={String(project?.orcamento)}
+            />
           </div>
         )}
       </div>

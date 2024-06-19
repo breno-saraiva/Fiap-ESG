@@ -4,18 +4,31 @@ import { SubmitButton } from "../../../../../../shared/ui/button";
 import React, { useState } from "react";
 import { listProjectProps } from "../../../../../../api/listProjects";
 import { listIniciativas } from "../../../../../../shared/mock/listiniciativas";
-import { projectType } from "../../../../../../types";
 import { TextArea } from "../../../../../../shared/ui/textArea";
 
 type ProjectFormProps = {
   textBtn?: string;
-  projectData?: projectType;
+  defaultName?: string;
+  defaultOrcamento?: string;
+  defaultSelect?: string;
+  defaultCotato?: string;
+  defaultDateInit?: string;
+  defaultDateFinal?: string;
+  defaultDescription?: string;
+  projectData?: listProjectProps;
   handleOnSubmit: (e: listProjectProps) => void;
 };
 
 const ProjectForm: React.FC<ProjectFormProps> = ({
   textBtn,
   projectData,
+  defaultName,
+  defaultOrcamento,
+  defaultSelect,
+  defaultCotato,
+  defaultDateInit,
+  defaultDateFinal,
+  defaultDescription,
   handleOnSubmit,
 }) => {
   const [project, setProject] = useState(projectData || {});
@@ -70,6 +83,7 @@ const ProjectForm: React.FC<ProjectFormProps> = ({
               type="text"
               text="nome do projeto"
               name="name"
+              defaultValue={defaultName}
               placeholder="Insira o nome do projeto"
             />
           </div>
@@ -79,6 +93,7 @@ const ProjectForm: React.FC<ProjectFormProps> = ({
               type="number"
               text="orçamento do projeto"
               name="orçamento"
+              defaultValue={defaultOrcamento}
               placeholder="Insira o orçamento total"
             />
           </div>
@@ -86,6 +101,7 @@ const ProjectForm: React.FC<ProjectFormProps> = ({
             <Select
               options={listIniciativas}
               text="Tipo de Projeto"
+              defaultValue={defaultSelect}
               Onchange={handleTypeProject}
             />
           </div>
@@ -98,6 +114,7 @@ const ProjectForm: React.FC<ProjectFormProps> = ({
             <Input
               type="text"
               text="contato"
+              defaultValue={defaultCotato}
               placeholder="exemplo@exemplo.com"
               OnChange={handleContato}
             />
@@ -106,17 +123,20 @@ const ProjectForm: React.FC<ProjectFormProps> = ({
             <Input
               type="date"
               text="Início projeto"
+              defaultValue={defaultDateInit}
               OnChange={handleDateInit}
             />
             <Input
               type="date"
               text="Final projeto"
+              defaultValue={defaultDateFinal}
               OnChange={handleDateFinish}
             />
           </div>
           <div>
             <TextArea
               title="Descrição do projeto"
+              defaultValue={defaultDescription}
               cols={5}
               rows={4}
               OnChange={handleDescription}
