@@ -8,6 +8,7 @@ type InputProps = {
   OnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string;
   pattern?: string;
+  defaultValue?: string;
 };
 
 const Input: React.FC<InputProps> = ({
@@ -18,6 +19,7 @@ const Input: React.FC<InputProps> = ({
   OnChange,
   value,
   pattern,
+  defaultValue,
 }) => {
   return (
     <div className="flex flex-col mb-4">
@@ -31,6 +33,7 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         onChange={OnChange}
         value={value}
+        defaultValue={defaultValue}
         className="p-[.7em] rounded-none border-none placeholder:text-[#7b7b7b]"
       />
     </div>

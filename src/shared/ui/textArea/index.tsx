@@ -5,6 +5,7 @@ type TextAreaProps = {
   name?: string;
   rows: number;
   cols: number;
+  defaultValue?: string;
   OnChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
@@ -13,6 +14,7 @@ const TextArea: React.FC<TextAreaProps> = ({
   name,
   rows,
   cols,
+  defaultValue,
   OnChange,
 }) => {
   return (
@@ -25,6 +27,7 @@ const TextArea: React.FC<TextAreaProps> = ({
         name={name}
         id={name}
         onChange={OnChange}
+        defaultValue={defaultValue}
         rows={rows}
         cols={cols}
       ></textarea>
