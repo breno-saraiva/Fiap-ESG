@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 type cardProjectProps = {
   id?: string;
   nome?: string;
-  orcamento?: string;
-  categoria?: { name: string; id: string };
+  orcamento?: number;
+  tipo_projeto?: string;
   handleRemove?: (id: string) => void;
 };
 
 const CardProject: React.FC<cardProjectProps> = ({
   id,
   nome,
-  categoria,
+  tipo_projeto,
   orcamento,
   handleRemove,
 }) => {
@@ -32,7 +32,7 @@ const CardProject: React.FC<cardProjectProps> = ({
         {orcamento}
       </p>
       <p className="text-[#7a7a7a] mb-4 flex items-center">
-        <span className="font-bold block">Categoria: </span> {categoria?.name}
+        <span className="font-bold block">Categoria: </span> {tipo_projeto}
       </p>
       <div className="flex justify-between items-center mt-5">
         <Link to={`/projectEdit/${id}`} className="text-xl">

@@ -23,7 +23,6 @@ const ProjectForm: React.FC<ProjectFormProps> = ({
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     handleOnSubmit(project as listProjectProps);
-    console.log("submit", project);
   };
 
   function handleNameProject(e: React.ChangeEvent<HTMLInputElement>) {
@@ -49,6 +48,11 @@ const ProjectForm: React.FC<ProjectFormProps> = ({
   function handleDateFinish(e: React.ChangeEvent<HTMLInputElement>) {
     e.persist();
     setProject({ ...project, prev_fim: e.target.value });
+  }
+
+  function handleContato(e: React.ChangeEvent<HTMLInputElement>) {
+    e.persist();
+    setProject({ ...project, contato: e.target.value });
   }
 
   function handleDescription(e: React.ChangeEvent<HTMLTextAreaElement>) {
@@ -92,9 +96,10 @@ const ProjectForm: React.FC<ProjectFormProps> = ({
         <div className="flex flex-col">
           <div>
             <Input
-              type="e-mail"
+              type="text"
               text="contato"
               placeholder="exemplo@exemplo.com"
+              OnChange={handleContato}
             />
           </div>
           <div className="flex gap-2">
