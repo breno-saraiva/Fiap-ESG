@@ -15,7 +15,7 @@ function Linkbutton({ to, text }: LinkbuttonProps) {
   return (
     <button
       onClick={handleClick}
-      className="bg-[#222] text-white py-2 px-4 duration-70 hover:text-[#FFBB33]"
+      className="bg-[#222] text-white py-2 px-4 duration-70 hover:text-[#22C55E]"
     >
       {text}
     </button>
