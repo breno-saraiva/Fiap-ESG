@@ -5,13 +5,12 @@ import { ProjectForm } from "../NewProjetc/components/Form/ProjectForm";
 
 function ProjectEdit() {
   const { id } = useParams();
-  console.log(id);
 
   const [project, setProject] = useState<listProjectProps>();
   const [showProjectForm, setShowProjectForm] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/projects/${id}`, {
+    fetch(`https://back-atv2-etapa4.vercel.app/projeto/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -23,8 +22,8 @@ function ProjectEdit() {
   }, [id]);
 
   function editPost(project: listProjectProps) {
-    fetch(`http://localhost:5000/projects/${id}`, {
-      method: "PATCH",
+    fetch(`https://back-atv2-etapa4.vercel.app/projeto/${id}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
@@ -48,7 +47,7 @@ function ProjectEdit() {
         <div className="flex justify-between">
           <h1 className="mb-4 text-5xl font-sans font-bold">
             <span className="bg-[#222] text-[#ffbb33]">Projeto:</span>{" "}
-            {project?.name}
+            {project?.nome}
           </h1>
           <button
             className="border-2 rounded-md w-32 bg-[#222] text-white hover:text-[#ffbb33]"
@@ -62,7 +61,7 @@ function ProjectEdit() {
             <p>
               <span className="text-2xl font-bold text-[#222]">Categoria:</span>{" "}
               <span className="text-xl font-medium text-[#7a7a7a]">
-                {project?.categories.name}
+                {project?.tipo_projeto}
               </span>
             </p>
             <p>
@@ -70,7 +69,7 @@ function ProjectEdit() {
                 Total de Orçamento:
               </span>{" "}
               <span className="text-xl font-medium text-[#7a7a7a]">
-                {project?.orçamento}
+                {project?.orcamento}
               </span>
             </p>
           </div>

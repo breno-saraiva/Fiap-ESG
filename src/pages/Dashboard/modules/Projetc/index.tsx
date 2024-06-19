@@ -16,7 +16,7 @@ function Project() {
   }
 
   async function deleteItem(id: string) {
-    await fetch(`http://localhost:5000/projects/${id}`, {
+    await fetch(`https://back-atv2-etapa4.vercel.app/projeto/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -42,9 +42,9 @@ function Project() {
             projects.map((project) => (
               <CardProject
                 id={project.id}
-                nome={project.name}
-                orcamento={project.orçamento}
-                categoria={project.categories}
+                nome={project.nome}
+                orcamento={project.orcamento}
+                tipo_projeto={project.tipo_projeto}
                 key={project.id}
                 handleRemove={deleteItem}
               />

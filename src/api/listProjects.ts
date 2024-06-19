@@ -6,10 +6,11 @@ export type listProjectProps = {
   descricao : string;
   nome : string;
   orcamento : number;
+  id?: string;
 };
 
 export const getListProject = async (): Promise<listProjectProps[]> => {
-  const data = await fetch("http://localhost:5000/projects", {
+  const data = await fetch("https://back-atv2-etapa4.vercel.app/projeto/", {
     method: "GET",
     headers: { "Content-type": "appplication/json" },
   })

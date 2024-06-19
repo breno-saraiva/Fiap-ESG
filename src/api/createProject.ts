@@ -1,7 +1,7 @@
 import { listProjectProps } from "./listProjects";
 
 export const createProject = async (project: listProjectProps) => {
-  await fetch("http://localhost:5000/projects", {
+  await fetch("https://back-atv2-etapa4.vercel.app/projeto", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
