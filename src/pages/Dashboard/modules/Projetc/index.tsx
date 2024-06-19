@@ -15,7 +15,7 @@ function Project() {
     setProjects(list);
   }
 
-  async function deleteItem(id: string) {
+  async function deleteItem(id: number) {
     await fetch(`https://back-atv2-etapa4.vercel.app/projeto/${id}`, {
       method: "DELETE",
       headers: {

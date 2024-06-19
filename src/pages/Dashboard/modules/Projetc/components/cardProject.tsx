@@ -3,11 +3,11 @@ import { HiOutlinePencilAlt } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 type cardProjectProps = {
-  id?: string;
+  id?: number;
   nome?: string;
   orcamento?: number;
   tipo_projeto?: string;
-  handleRemove?: (id: string) => void;
+  handleRemove?: (id: number) => void;
 };
 
 const CardProject: React.FC<cardProjectProps> = ({

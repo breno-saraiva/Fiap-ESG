@@ -6,7 +6,7 @@ export type listProjectProps = {
   descricao : string;
   nome : string;
   orcamento : number;
-  id?: string;
+  id: number;
 };
 
 export const getListProject = async (): Promise<listProjectProps[]> => {
